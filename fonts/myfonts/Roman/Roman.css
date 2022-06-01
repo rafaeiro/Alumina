@@ -1,0 +1,61 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 5040129, 2022-06-01T09:34:45-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Alumina-56RomantIt by Rafaeiro Typeiro
+ * URL: https://www.myfonts.com/fonts/rafaeiro-typeiro/alumina/56-roman-italic/
+ * 
+ * Webfont: Alumina-86BlackIt by Rafaeiro Typeiro
+ * URL: https://www.myfonts.com/fonts/rafaeiro-typeiro/alumina/86-black-italic/
+ * 
+ * Webfont: Alumina-55Roman by Rafaeiro Typeiro
+ * URL: https://www.myfonts.com/fonts/rafaeiro-typeiro/alumina/55-roman/
+ * 
+ * Webfont: Alumina-85Black by Rafaeiro Typeiro
+ * URL: https://www.myfonts.com/fonts/rafaeiro-typeiro/alumina/85-black/
+ * 
+ * 
+ * Webfonts copyright: null
+ * 
+ * © 2022 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/4ce801");
+  
+@font-face {
+  font-family: "Alumina";
+  font-style: italic;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('webFonts/Alumina/italic_normal_bold.woff2') format('woff2'), url('webFonts/Alumina/italic_normal_bold.woff') format('woff');
+}
+@font-face {
+  font-family: "Alumina";
+  font-style: normal;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('webFonts/Alumina/normal_normal_normal.woff2') format('woff2'), url('webFonts/Alumina/normal_normal_normal.woff') format('woff');
+}
+@font-face {
+  font-family: "Alumina";
+  font-style: normal;
+  font-weight: bold;
+  font-stretch: normal;
+  src: url('webFonts/Alumina/normal_normal_bold.woff2') format('woff2'), url('webFonts/Alumina/normal_normal_bold.woff') format('woff');
+}
+@font-face {
+  font-family: "Alumina";
+  font-style: italic;
+  font-weight: normal;
+  font-stretch: normal;
+  src: url('webFonts/Alumina/italic_normal_normal.woff2') format('woff2'), url('webFonts/Alumina/italic_normal_normal.woff') format('woff');
+}
+
