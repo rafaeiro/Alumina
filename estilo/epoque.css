@@ -267,7 +267,7 @@ h2 {
 }
 
 #p96::first-line {
-    font: normal normal normal 12em/1em var(--tipBase), sans-serif;
+    font: normal normal normal 12em/1em var(--tipBase), Monospace;
     display: inline-block;
     float: left;
 }
@@ -295,9 +295,7 @@ h2 {
 }
 
 #p48::first-line {
-    font-family: var(--tipBold);
-    font-variant: normal;
-    font-weight: normal;
+    font: normal normal normal var(--tipBold), Monospace;
     display: block;
     font-size: 6em;
     float: left;
@@ -329,7 +327,7 @@ h2 {
 }
 
 #p32::first-line {
-    font-family: var(--tipBase);
+    font-family: normal bold normal var(--tipBase), Monospace;
     font-variant: "normal";
     font-weight: "bold";
     display: "inline-block";
@@ -363,7 +361,7 @@ h2 {
 }
 
 #p24::first-line {
-    font-family: var(--tipBold);
+    font-family: normal bold normal var(--tipBold), Monospace;
     font-variant: normal;
     font-weight: bold;
     display: block;
