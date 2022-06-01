@@ -9,25 +9,26 @@
     --cor06: #010816;
     --cor07: #E8164E;
     --cor08: #F25561;
-    --tipBase: "EpoqueSeria";
-    --tipBold: "EpoqueSeriaBlack"; 
-    --tipSc1: "EpoqueSeria-XtLightSc"; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
-    --tipSc2: "EpoqueSeria-LightSc"; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
-    --tipSc3: "EpoqueSeria-RomanSc"; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
-    --tipSc4: "EpoqueSeria-BoldSc"; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
+    --tipBase: "Alumina", sans-serif;
+    --tipLight: "Alumina-Light", sans-serif; 
+    --tipXlight: "Alumina-XLight", sans-serif; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
+    --style: normal;
+    --peso: normal;
+    --stretch: normal;
+    --default: var(--style) var(--peso) var(--stretch);
 }
 * {
     color: var(--cor02);
 }
 body {
-    font: normal normal normal 1em/1 var(--tipBase), sans-serif;
+    font: var(--default) 1em/1 var(--tipBase);
 }
 section>h1 {
-    font: normal bold 5em/1 var(--tipBold), sans-serif;
+    font: normal bold 10em/1 var(--tipBase);
     text-align: left;
     color: var(--cor02);
     padding-top: 72px;
-    padding-left: 38vw;
+    padding-left: 26vw;
 }
 
  .salt {
@@ -39,7 +40,7 @@ section>h1 {
     -o-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
 }
 .smcp{ /* muda a fonte para a versão com smcp*/
-    font-family: var(--tipSc4);
+    font-family: var(--tipXlight);
     letter-spacing: 0.025em; 
 }
 
@@ -170,7 +171,6 @@ section {
     padding-top: 8vw;
     font-size: 1.42em;
     line-height: 1.3em;
-    font-weight: bold;
 }
 .div {
     margin: 0 18vw 4vw 18vw;
@@ -240,7 +240,7 @@ h2 {
 }
 #p96 {
     float: left;
-    width: 30%;
+    width: 25%;
     padding: 18px 12px 0 12px;
     line-height: 6.15em;
     letter-spacing: 0.035em;
@@ -258,25 +258,56 @@ h2 {
 }
 
 #p96::after {
-    content: "Light 96pt";
+    content: "XLight 96pt";
     line-height: 1em;
 }
 
 #p96:hover::after {
-    content: "Light it 96pt";
+    content: "XLight it 96pt";
 }
 
 #p96::first-line {
-    font: normal normal normal 12em/1em var(--tipBase), Monospace;
+    font: var(--default) 12em/1em var(--tipXlight), Monospace;
     display: inline-block;
     float: left;
 }
 
+
+#p72 {
+    float: left;
+    width: 18%;
+    padding: 89px 12px 0px 12px;
+    line-height: 9.05em;
+    letter-spacing: 0.035em;
+}
+
+#p72:hover {
+    font-style: italic;
+    color: var(--cor04);
+}
+
+#p72::after {
+    content: "Light 72pt";
+    line-height: 1em;
+}
+
+#p72:hover::after {
+    content: "Light it 72pt";
+}
+
+#p72::first-line {
+    font: var(--default) 9em/.65em var(--tipLight), Monospace;
+    display: inline-block;
+    float: left;
+    letter-spacing: 0.005em;
+}
+
+
 #p48 {
     float: left;
-    width: 24%;
+    width: 14%;
     padding: 89px 12px 0px 12px;
-    line-height: 7.05em;
+    line-height: 5.05em;
     letter-spacing: 0.035em;
 }
 
@@ -287,7 +318,6 @@ h2 {
 
 #p48::after {
     content: "Roman 48pt";
-    line-height: 1em;
 }
 
 #p48:hover::after {
@@ -295,43 +325,37 @@ h2 {
 }
 
 #p48::first-line {
-    font: normal normal normal var(--tipBold), Monospace;
-    display: block;
-    font-size: 6em;
+    font: var(--default) 6em/1.30em var(--tipBase), Monospace;
+    display: block; 
     float: left;
     letter-spacing: 0.005em;
-
 }
 
-#p32 {
+#p36 {
     float: left;
-    width: 20%;
+    width: 12%;
     padding: 106px 12px 0px 12px;
-    line-height: 6.255em;
+    line-height: 5.255em;
     letter-spacing: 0.035em;
 }
 
-#p32:hover {
+#p36:hover {
     font-style: italic;
     font-weight: normal;
     color: var(--cor04);
 }
 
-#p32::after {
-    content: "Bold 32pt";
-    line-height: 1em;
+#p36::after {
+    content: "Bold 36pt";
 }
 
-#p32:hover::after {
-    content: "Bold it 32pt";
+#p36:hover::after {
+    content: "Bold it 36pt";
 }
 
-#p32::first-line {
-    font-family: normal bold normal var(--tipBase), Monospace;
-    font-variant: "normal";
-    font-weight: "bold";
+#p36::first-line {
+    font: normal bold normal 4.5em/1.5em var(--tipXlight), Monospace;
     display: "inline-block";
-    font-size: 4em;
     float: left;
     letter-spacing: 0.011em;
 
@@ -340,8 +364,8 @@ h2 {
 #p24 {
     float: left;
     padding: 118px 12px 0 0;
-    width: 18%;
-    line-height: 5.80em;
+    width: 9%;
+    line-height: 4.80em;
     letter-spacing: 0.035em;
 
 }
@@ -352,24 +376,45 @@ h2 {
 }
 
 #p24::after {
-    content: "Black 24pt";
-    line-height: 1em;
+    content: "Bold 24pt";
 }
 
 #p24:hover::after {
-    content: "Black it 24pt";
+    content: "Bold it 24pt";
 }
 
 #p24::first-line {
-    font-family: normal bold normal var(--tipBold), Monospace;
-    font-variant: normal;
-    font-weight: bold;
+    font: normal bold normal 3em/2.1em var(--tipLight), Monospace;
     display: block;
-    font-size: 3em;
     letter-spacing: 0.018em;
+}
+
+#p18 {
+    float: left;
+    padding: 118px 12px 0 0;
+    width: 10%;
+    line-height: 3.80em;
+    letter-spacing: 0.035em;
 
 }
 
+#p18::after {
+    content: "Black 18pt";
+}
+
+#p18::first-line {
+    font: normal bold normal 2.25em/3em var(--tipBase), Monospace;
+    display: block;
+    font-size: 2.25em;
+    letter-spacing: 0.018em;
+}
+#p18:hover {
+    font-style: italic;
+    color: var(--cor04);
+}
+#p18:hover::after {
+    content: "Black it 18pt";
+}
 .paginas {
     position: relative;
     background-image: linear-gradient(to right, #E8164E , #F25561);
@@ -385,7 +430,7 @@ h2 {
     position: absolute;
     z-index: 999;
     display: block;
-    font: bold normal 8em/1.15 var(--tipBold), sans-serif;
+    font: bold normal 8em/1.15 var(--tipBase), sans-serif;
     color: var(--cor02);
     background-color: var(--cor05);
     clear: both;
@@ -512,7 +557,7 @@ picture>img {
 }
 
 #fig {
-    font: normal bold 4em/1.15em var(--tipBold), sans-serif;
+    font: normal bold 4em/1.15em var(--tipBase), sans-serif;
     text-align: left;
 }
 .figures4 {
@@ -537,7 +582,7 @@ p.figures1:hover::before {
 }
 
 p.figures2:hover {
-    font: normal bold 1em/1.15em var(--tipBold), sans-serif;
+    font: normal bold 1em/1.15em var(--tipBase), sans-serif;
     color: var(--cor04);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "dnom";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "dnom";
@@ -649,7 +694,7 @@ article>h3 {
 }
 
 #info p {
-    font: normal bold 1.11em/1.3 "EpoqueSeria";
+    font: normal normal 1.11em/1.3 var(--tipXlight), sans-serif;
     color: var(--cor06);
     padding: 24px 0;
 }
@@ -750,7 +795,6 @@ footer {
         margin: 0 120px 0 120px;
         font-size: 1.3em;
         line-height: 1.35em;
-        font-weight: bold;
     }
     .tamanhos {
         width: 50%;
@@ -985,7 +1029,6 @@ footer {
         margin: 0 40px 0 80px;
         font-size: 1.2em;
         line-height: 1.3em;
-        font-weight: bold;
     }
     .desc { 
         font-size: 1.1em;
@@ -1227,7 +1270,6 @@ footer {
         padding-bottom: 6vw;
         font-size: 1.15em;
         line-height: 1.3em;
-        font-weight: bold;
     }
     .desc { 
         font-size: 1.1em;
