@@ -6,9 +6,6 @@
 
 :root {
     --black: #000;
-    --off-black: #333;
-    --accent:#ff3064; /* #e39b10 */
-    --accent-dark: #a53b28;
     --white: #f6f6f6;
     --off-white: #eee;
     --gridline: #999;
@@ -37,7 +34,7 @@
 #waterfall:first-of-type, #opentype:first-of-type { margin-top: 25px; }
 
 strong,
-b { font-family: "EpoqueSeriaBlack"; font-weight: bold; }
+b { font-family: var(--tipLight); font-weight: bold; }
 i,
 em { font-style: italic;}
 
@@ -102,7 +99,6 @@ p {
 .compact { padding: 0px 16px; }
 .flush { padding: 0px; }
 .italic {
-    font-family: "EpoqueSeria";
     font-style: italic;
 }
 
@@ -127,16 +123,16 @@ p {
 
     font-size: 14px;
     letter-spacing: 0.02em;
-    --wght: 500;
+    font-weight: bold;
 }
 
 .header__title,
 .header__section_title,
 .header__link { border-left: var(--solid); }
 .header__link { border-right: var(--solid); }
-.header__section_title { --wght: 700; }
+.header__section_title { font-family: var(--tipLight), sans-serif; font-weight: bold;}
 .header__section_number {
-    color: var(--accent);
+    color: var(--cor05);
     font-variant-numeric: tabular-nums;
     font-feature-settings: "zero";
     float: right;
@@ -150,7 +146,8 @@ p {
 
 .content_section .subhead {
     border-bottom: var(--dashed);
-    --wght: 500;
+    font-family: var(--tipXLight), sans-serif;
+    font-weight: bold;
 }
 
 /*
@@ -168,14 +165,13 @@ p {
     white-space: nowrap;
     line-height: 1.2;
     color: var(--cor04);
-    --wght: inherit;
-
+    font-weight: inherit;
     width: 100%;
     overflow: hidden;
 }
 
 .content_section .waterfall li:hover,
-.content_section .waterfall li:focus { color: var(--accent); }
+.content_section .waterfall li:focus { color: var(--cor05); }
 .content_section .waterfall li:focus { outline: none; }
 
 .waterfall__1 { font-size: 16px; }
@@ -202,7 +198,7 @@ p {
 
 .waterfall__controls input {
     grid-column-end: span 2;
-    /* background-color: var(--off-white); */
+    background-color: var(--off-white);
 }
 
 .waterfall__controls p,
@@ -241,7 +237,7 @@ p {
 .opentype_section .card .card__upper__state::before { content: "On"; }
 .opentype_section .card:hover .card__upper__state::before { content: "Off"; }
 
-.opentype_section .card:hover .card__upper { color: var(--accent); }
+.opentype_section .card:hover .card__upper { color: var(--cor05); }
 .opentype_section .card:hover .card__upper b { color: var(--black); }
 
 .opentype_section .card__upper__tag { display: none;}
@@ -250,22 +246,21 @@ p {
 .opentype_section .card__lower {
     font-size: 50px;
     line-height: 50px;
-    --wght: 600;
+    font-family: var(--tipLight), sans-serif;
+     font-weight: bold;
     padding-bottom: 50px;
     color: var(--cor04);
 }
 
-.onum { font-feature-settings: "onum"; }
-.card .ss01 { font-feature-settings: "ss01"; }
-.card .ss02 { font-feature-settings: "ss02"; }
-.card .ss03 { font-feature-settings: "ss03"; }
-.card .ss11 { font-feature-settings: "ss11"; --slnt: -10; }
-.card .ss12 { font-feature-settings: "ss12"; --slnt: -10; }
+.onum, { font-feature-settings: "onum", "liga"; }
+.card .salt { font-feature-settings: "salt"; }
+.card .ss01 { font-feature-settings: "ss02"; }
+.card .ss02 { font-feature-settings: "ss03"; }
 .card .tnum { font-feature-settings: "tnum"; }
 .card .onum { font-feature-settings: "onum"; }
 .card .tosf { font-feature-settings: "tnum", "onum" }
 .card .zero { font-feature-settings: "zero"; }
-.card .smcp { font-family: "EpoqueSeria-XtLightSc"; }
+.card .smcp { font-feature-settings: "smcp"; }
 .card .c2sc { font-feature-settings: "c2sc"; }
 .card .case { font-feature-settings: "case"; }
 .card .locl { font-feature-settings: "locl"; }
@@ -275,11 +270,9 @@ p {
 .card .sups { font-feature-settings: "sups"; }
 .card .subs { font-feature-settings: "subs"; }
 .card .ordn { font-feature-settings: "ordn"; }
+.card:hover .card__lower.salt,
 .card:hover .card__lower.ss01,
 .card:hover .card__lower.ss02,
-.card:hover .card__lower.ss03,
-.card:hover .card__lower.ss11,
-.card:hover .card__lower.ss12,
 .card:hover .card__lower.tnum,
 .card:hover .card__lower.onum,
 .card:hover .card__lower.tosf,
@@ -292,11 +285,10 @@ p {
 .card:hover .card__lower .sups,
 .card:hover .card__lower .subs,
 .card:hover .card__lower.ordn,
+.card:hover .card__lower.smcp,
+.card:active .card__lower.salt,
 .card:active .card__lower.ss01,
 .card:active .card__lower.ss02,
-.card:active .card__lower.ss03,
-.card:active .card__lower.ss11,
-.card:active .card__lower.ss12,
 .card:active .card__lower.tnum,
 .card:active .card__lower.onum,
 .card:active .card__lower.tosf,
@@ -312,10 +304,9 @@ p {
 .card:active .card__lower.ordn { font-feature-settings: unset;}
 .card:hover .card__lower.locl,
 .card:active .card__lower.locl { font-feature-settings: "locl" 0 !important;}
-.card:hover .card__lower.smcp { font-family: "EpoqueSeria";}
 
 /* Spans dentro de cards*/
-.catalan, .nederland, .portugues, .numr, .dnom, .sups, .subs {
+.catalan, .nederland, .turkish, .numr, .dnom, .sups, .subs {
     color: var(--cor04);
 }
 

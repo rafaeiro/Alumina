@@ -1,14 +1,14 @@
 @charset "utf-8";
 
 :root{
-    --cor01: rgba(255, 255, 255, 0.85);
-    --cor02: #ffffff;
-    --cor03: #e6e6e6;
-    --cor04: #00233c;
-    --cor05: #00233cd2;
-    --cor06: #010816;
-    --cor07: #E8164E;
-    --cor08: #F25561;
+    --cor01: #fff;
+    --cor02: #ffffffd9;
+    --cor03: #fbb879;
+    --cor04: #af3f24;
+    --cor05: #fc473a;
+    --cor06: #ac312c;
+    --cor07: #551010;
+    --cor08: #000;  
     --tipBase: "Alumina", sans-serif;
     --tipLight: "Alumina-Light", sans-serif; 
     --tipXlight: "Alumina-XLight", sans-serif; /* Essa fonte não dispões de Bold e Itálic como recurso css*/
@@ -40,7 +40,7 @@ section>h1 {
     -o-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
 }
 .smcp{ /* muda a fonte para a versão com smcp*/
-    font-family: var(--tipXlight);
+    font-feature-settings: "smcp" on;
     letter-spacing: 0.025em; 
 }
 
@@ -62,10 +62,10 @@ ul {
     list-style-type: none;
 }
 a {
-    color: var(--cor04) ;
+    color: var(--cor03) ;
 }
 a:hover:active {
-    color: var(--cor04) ;
+    color: var(--cor03) ;
 }
 a:visited {
     color:#451f57b7 ;
@@ -84,13 +84,14 @@ section {
 }
 
 #prologo p {
-    text-align: left;
+    text-align: center;
     font-weight: bold;
     font-size: 1.25em;
     padding-top: 15vh;
     padding-bottom: 5px;
-    padding-left: 38vw;
-    color: var(--cor06);
+    padding-left: 0;
+    color: var(--cor05);
+    letter-spacing: 0.07em;
     z-index: 1010;
 }
 
@@ -136,9 +137,9 @@ section {
     color: rgba(76, 76, 161, 0.747);
 }
 #prologo {
-    background-color: rgb(252, 253, 253);
+    background-color: var(--cor01);
     width: 100%;
-    background-image: url("../midia/imagens/background-lines-large_01.png"), linear-gradient(to right, #E8164E , #F25561);
+    background-image: url("../midia/imagens/background-lines-large_01.png"), linear-gradient(to right, var(--cor04) , var(--cor07));
     background-position: bottom center;
     background-size: 100%;
     background-attachment: fixed;
@@ -165,7 +166,7 @@ section {
 }
 
 #desc {
-    color: var(--cor06);
+    color: var(--cor07);
     text-align: left;
     margin: 0 18vw 4vw 18vw;
     padding-top: 8vw;
@@ -209,7 +210,7 @@ section {
     height: 150vh;
 }
 .paginas1 {
-    background-image: url("../midia/imagens/originais/comparativo.svg"); 
+    background-image: url("../midia/imagens/originais/tres-larguras.svg"); 
     background-repeat: no-repeat;
     background-attachment: local;
     background-position: top center;
@@ -217,7 +218,7 @@ section {
     margin: -1.3vh auto;
     min-height: 128vh;
     height: 188vh;
-    background-color: #f1f2f3;
+    background-color: var(--cor03);
     z-index: 1000;
 }
 #terceira{
@@ -232,7 +233,7 @@ section {
 
 h2 {
     font-size: 3em;
-    color: var(--cor06);
+    color: var(--cor08);
 }
 .tamanhos {
     width: 100%;
@@ -243,17 +244,12 @@ h2 {
     width: 25%;
     padding: 18px 12px 0 12px;
     line-height: 6.15em;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.08em;
 }
 
-#p96:hover {
-    font: italic bold 1em/6.15em var(--tipBase), sans-serif;
-    font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
-    -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
-    -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
-    -ms-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
-    -o-font-feature-settings: "kern" on, "liga" on, "calt" off, "salt";
-    color: var(--cor04);
+#p96:hover, #p96:hover::first-line {
+    font-style: italic;
+    color: var(--cor05);
     
 }
 
@@ -278,12 +274,12 @@ h2 {
     width: 18%;
     padding: 89px 12px 0px 12px;
     line-height: 9.05em;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.08em;
 }
 
-#p72:hover {
+#p72:hover, #p72:hover::first-line {
     font-style: italic;
-    color: var(--cor04);
+    color: var(--cor05);
 }
 
 #p72::after {
@@ -308,12 +304,12 @@ h2 {
     width: 14%;
     padding: 89px 12px 0px 12px;
     line-height: 5.05em;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.08em;
 }
 
-#p48:hover {
+#p48:hover, #p48:hover::first-line {
     font-style: italic;
-    color: var(--cor04);
+    color: var(--cor05);
 }
 
 #p48::after {
@@ -331,29 +327,28 @@ h2 {
     letter-spacing: 0.005em;
 }
 
-#p36 {
+#p32 {
     float: left;
     width: 12%;
     padding: 106px 12px 0px 12px;
     line-height: 5.255em;
-    letter-spacing: 0.035em;
+    letter-spacing: 0.08em;
 }
 
-#p36:hover {
+#p32:hover, #p32:hover::first-line {
     font-style: italic;
-    font-weight: normal;
-    color: var(--cor04);
+    color: var(--cor05);
 }
 
-#p36::after {
-    content: "Bold 36pt";
+#p32::after {
+    content: "Bold 32pt";
 }
 
-#p36:hover::after {
-    content: "Bold it 36pt";
+#p32:hover::after {
+    content: "Bold it 32pt";
 }
 
-#p36::first-line {
+#p32::first-line {
     font: normal bold normal 4.5em/1.5em var(--tipXlight), Monospace;
     display: "inline-block";
     float: left;
@@ -366,13 +361,12 @@ h2 {
     padding: 118px 12px 0 0;
     width: 9%;
     line-height: 4.80em;
-    letter-spacing: 0.035em;
-
+    letter-spacing: 0.08em;
 }
 
-#p24:hover {
+#p24:hover, #p24:hover::first-line {
     font-style: italic;
-    color: var(--cor04);
+    color: var(--cor05);
 }
 
 #p24::after {
@@ -386,7 +380,7 @@ h2 {
 #p24::first-line {
     font: normal bold normal 3em/2.1em var(--tipLight), Monospace;
     display: block;
-    letter-spacing: 0.018em;
+    letter-spacing: 0.05em;
 }
 
 #p18 {
@@ -394,8 +388,7 @@ h2 {
     padding: 118px 12px 0 0;
     width: 10%;
     line-height: 3.80em;
-    letter-spacing: 0.035em;
-
+    letter-spacing: 0.08em;
 }
 
 #p18::after {
@@ -406,18 +399,18 @@ h2 {
     font: normal bold normal 2.25em/3em var(--tipBase), Monospace;
     display: block;
     font-size: 2.25em;
-    letter-spacing: 0.018em;
+    letter-spacing: 0.066em;
 }
-#p18:hover {
+#p18:hover, #p18:hover::first-line {
     font-style: italic;
-    color: var(--cor04);
+    color: var(--cor05);
 }
 #p18:hover::after {
     content: "Black it 18pt";
 }
 .paginas {
     position: relative;
-    background-image: linear-gradient(to right, #E8164E , #F25561);
+    background-image: linear-gradient(to right, var(--cor04) , var(--cor07));
     height: 100vh;
     text-align: center;
     padding-top: 20px;
@@ -432,12 +425,13 @@ h2 {
     display: block;
     font: bold normal 8em/1.15 var(--tipBase), sans-serif;
     color: var(--cor02);
-    background-color: var(--cor05);
+    background-color: var(--cor02);
+    opacity: 60%;
     clear: both;
     margin: 20vh 15vh 5vh 6vh;
     box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.3 );
-    backdrop-filter: blur( 3px );
-    -webkit-backdrop-filter: blur( 3px );
+    backdrop-filter: blur( 1px );
+    -webkit-backdrop-filter: blur( 1px );
     border-radius: 10px;
     border-top: 1px solid rgba( 255, 255, 255, 0.18 );
     border-left: 1px solid rgba( 255, 255, 255, 0.18 );
@@ -523,7 +517,7 @@ picture>img {
     position: absolute;
     width: 18px;
     border-radius: 50%;
-    box-shadow: 2px 2px 4px 1px black;
+    box-shadow: 2px 2px 4px 1px var(--cor06);
     z-index: 10;
     opacity: 45%;
 }
@@ -565,7 +559,7 @@ picture>img {
 }
 
 p.figures1:hover {
-    color: var(--cor04);
+    color: var(--cor05);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum";
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum";
@@ -583,7 +577,7 @@ p.figures1:hover::before {
 
 p.figures2:hover {
     font: normal bold 1em/1.15em var(--tipBase), sans-serif;
-    color: var(--cor04);
+    color: var(--cor05);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "dnom";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "dnom";
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "dnom";
@@ -601,7 +595,7 @@ p.figures2:hover::before {
 
 p.figures3:hover {
     font: normal bold 1em/1.15em var(--tipBase), sans-serif;
-    color: var(--cor04);
+    color: var(--cor05);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "sups";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig","sups";
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "sups";
@@ -619,7 +613,7 @@ p.figures3:hover::before {
 
 p.figures4:hover {
     font: normal normal 1em/1.15em var(--tipBase), sans-serif;
-    color: var(--cor04);
+    color: var(--cor05);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "numr";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "numr";
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "numr";
@@ -628,7 +622,7 @@ p.figures4:hover {
 }
 
 #num:hover {
-    color: var(--cor04);
+    color: var(--cor05);
     font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "dnom";
     -moz-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "dnom";
     -webkit-font-feature-settings: "kern" on, "liga" on, "calt" off, "dlig", "onum", "dnom";
@@ -706,11 +700,11 @@ article>h3 {
     margin: 10px;
 }
 #canais {
-    background-color: #f1f2f3;
+    background-color: var(--cor02);
     height: 60vh;
 }
 #canais>h2 {
-    color: var(--cor05);
+    color: var(--cor03);
     font-weight: 900;
     text-align: center;
     padding-top: 30px;
@@ -731,7 +725,7 @@ article>h3 {
 footer {
     width: 100%;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: black;
+    background-color: var(--cor08);
     text-align: center;
     color: var(--cor01);
     line-height: 1.2em;
