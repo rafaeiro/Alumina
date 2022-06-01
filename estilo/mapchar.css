@@ -7,13 +7,14 @@
     font-weight: bold;
 }
 #mapadecaracteres {
-    height: 80vw;
+    position: relative;
     background-image: url("../midia/imagens/background-lines-large_02.png");
     background-position: top center;
     background-size: 100%;
     background-attachment: local;
     background-repeat: no-repeat;
     background-blend-mode: multiply;
+    background-color: var(--cor01);
 }
 #map {
     margin:0 16.82vw;

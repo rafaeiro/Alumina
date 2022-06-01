@@ -17,19 +17,15 @@
     --dashed: 1px dashed var(--gridline);
 }
 
-#waterfall {
+#waterfall, #opentype {
+    position: relative;
     box-sizing: border-box;
     width: 94vw;
-    height: 220vh; 
+
 }
 .waterfall {
     width: 94vw;
 }
-#opentype {
-    width: 94vw;
-    height: 135vh;
-}
-
 
 #waterfall:first-of-type, #opentype:first-of-type { margin-top: 25px; }
 
@@ -112,7 +108,7 @@ p {
 ╰─────────────────╯
 */
 
-.content_section { padding-bottom: 150px; }
+.content_section { padding-bottom: 20px; }
 .content_section header {
     position: sticky;
     top: 0px;
@@ -320,7 +316,6 @@ p {
     
     .grid { padding: 0px 64px; }
     .waterfall { margin: 0px 64px; }
-    .splash { padding: 10px 80px 20px; }
 
     .designspace_wrapper .designspace { --size: 180px; margin-bottom: 100px; }
     .ds__viewer__input { padding: 140px 0px; }
@@ -355,9 +350,7 @@ p {
 
 /* MOBILE */
 @media only screen and (max-width: 1000px) {
-    #opentype {
-        height: 205vh;
-    }
+
     .hide_on_mobile { display: none; }
     .show_on_mobile { display: initial; }
     
@@ -365,7 +358,6 @@ p {
 
     .grid { padding: 0px 16px; }
     .waterfall { margin: 0px 16px; }
-    .splash { padding: 10px 32px 20px; }
 
     /* Fake a 2-column grid, use a 4-column one */
     .background_grid { grid-template-columns: repeat(2, 1fr); }
@@ -424,12 +416,7 @@ p {
 
 /* EXTRA TINY */
 @media only screen and (max-width: 500px) {
-    #opentype {
-        height: 401vh;
-    }
-    #waterfall {
-        height: 176vh;
-    }
+
     .styles_overview p { display: none; }
     .styles_overview div { grid-column: 1 / -1; border-bottom: var(--dashed); }
 
